@@ -28,6 +28,10 @@ repositories {
         name "squeek"
         url "http://www.ryanliptak.com/maven"
     }
+    maven {
+        name "Tinkers, Natura"
+        url "http://dvs1.progwml6.com/files/maven"
+    }
     ivy {
         name "MineTweaker3"
         artifactPattern "http://minetweaker3.powerofbytes.com/download/[module]-[revision].[ext]"
@@ -72,6 +76,9 @@ dependencies {
     compile "applecore:AppleCore:1.7.10-1.0.2+87.f5270:api"
 
     compile name: 'MineTweaker3', version: "Dev-${config.version.minecraft}-${config.version.minetweaker}", ext: 'jar'
+
+    compile "tconstruct:TConstruct:${config.version.minecraft}-${config.version.tconstruct}:deobf"
+    compile "mods.natura:natura:${config.version.minecraft}-${config.version.natura}:deobf"
 
     // Test dependencies
     testCompile "junit:junit:4.12"
